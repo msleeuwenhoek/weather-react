@@ -1,0 +1,9 @@
+.Forecast {
+  border: 1px solid white;
+  border-radius: 8px;
+  margin: 5%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  box-shadow: 0.3em 0.5em 0.5em #00000094;
+}
