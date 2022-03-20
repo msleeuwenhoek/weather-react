@@ -6,9 +6,19 @@
   font-weight: 300;
 }
 
-.Weather bold {
+.Weather .temperature {
   font-weight: bold;
   font-size: 1.6em;
+}
+
+.Weather .units {
+  font-size: 0.8em;
+}
+
+.Weather a {
+  font-weight: 700;
+  color: white;
+  text-decoration: none;
 }
 .Weather h1 {
   font-size: 1.6em;
@@ -30,5 +40,37 @@
   }
   .Weather {
     text-align: center;
+  }
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  margin-block: 5%;
+}
+.Search input,
+.Search button {
+  margin-inline: 1%;
+  box-shadow: 0.3em 0.5em 0.5em #00000094;
+  border-radius: 8px;
+  border: none;
+}
+.Search button {
+  background-color: #4e3154;
+}
+.Search button:hover {
+  background-color: #7b4f84;
+}
+
+.Search .btn-small {
+  display: none;
+}
+
+@media screen and (max-width: 820px) {
+  .Search .btn-small {
+    display: block;
+  }
+  .Search .btn-large {
+    display: none;
   }
 }
