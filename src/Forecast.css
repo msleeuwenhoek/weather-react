@@ -7,3 +7,42 @@
   justify-content: space-evenly;
   box-shadow: 0.3em 0.5em 0.5em #00000094;
 }
+
+.WeekdayForecast .row {
+  align-items: center;
+}
+.WeekdayForecast {
+  font-size: 1.2em;
+  text-align: left;
+  font-weight: 600;
+  margin-inline: 5%;
+  padding-inline: 5%;
+
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+}
+
+.WeekdayForecast .weather-icon {
+  margin: -10%;
+  max-width: 150px;
+}
+
+.min-temp {
+  opacity: 0.5;
+}
+
+@media (max-width: 460px) {
+  .WeekdayForecast {
+    font-size: 0.8em;
+    padding-inline: 2%;
+  }
+  .WeekdayForecast .weather-icon {
+    max-width: 70px;
+  }
+
+  .WeekdayForecast .col {
+    padding: 2%;
+  }
+}
