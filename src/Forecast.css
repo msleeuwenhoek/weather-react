@@ -1,11 +1,8 @@
 .Forecast {
-  border: 1px solid white;
-  border-radius: 8px;
   margin: 5%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  box-shadow: 0.3em 0.5em 0.5em #00000094;
 }
 
 .WeekdayForecast .row {
@@ -27,23 +24,39 @@
 
 .WeekdayForecast .weather-icon {
   margin: -10%;
-  max-width: 150px;
 }
 
 .min-temp {
   opacity: 0.5;
 }
 
-@media (max-width: 460px) {
+@media (max-width: 560px) {
   .WeekdayForecast {
     font-size: 0.8em;
     padding-inline: 2%;
   }
   .WeekdayForecast .weather-icon {
-    max-width: 70px;
+    max-width: 7em;
   }
 
   .WeekdayForecast .col {
     padding: 2%;
   }
 }
+
+@media (max-width: 520px) {
+  .WeekdayForecast .weather-icon {
+    max-width: 5em;
+  }
+}
+
+@media (max-width: 360px) {
+  .WeekdayForecast .weather-icon {
+    max-width: 3em;
+  }
+}
+@media (max-width: 250px) {
+  .WeekdayForecast .temp {
+    font-size: 0.7em;
+  }
+} ;

@@ -1,9 +1,17 @@
 .Weather {
   padding-inline: 2em;
 }
+
+.weather-background {
+  background-image: url("https://static.vecteezy.com/system/resources/previews/002/533/422/non_2x/landscape-nature-with-grass-field-pine-trees-and-mountains-vector.jpg");
+  background-size: cover;
+  padding: 3em 2em;
+  color: white;
+  font-weight: 700;
+}
 .Weather .temp {
   font-size: 2em;
-  font-weight: 300;
+  font-weight: 700;
 }
 
 .Weather .temperature {
@@ -34,7 +42,13 @@
   margin-top: -2em;
 }
 
-@media (max-width: 550px) {
+.WeatherInfo .row {
+  align-items: center;
+}
+.WeatherInfo .temp-col {
+  text-align: center;
+}
+@media (max-width: 650px) {
   .Weather .split-weather {
     flex-direction: column;
   }
@@ -54,10 +68,27 @@ form {
   box-shadow: 0.3em 0.5em 0.5em #00000094;
   border-radius: 8px;
   border: none;
+  min-height: 2.5em;
 }
 .Search button {
-  background-color: #4e3154;
+  background-color: #139480;
 }
 .Search button:hover {
-  background-color: #7b4f84;
+  background-color: #27bea8;
+}
+
+@media (min-width: 800px) {
+  .WeatherInfo {
+    max-width: 70%;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 400px) {
+  .Weather .today,
+  .Weather .weather-data {
+    font-size: 0.9em;
+  }
+  .weather-background {
+    padding: 0.5em;
+  }
 }

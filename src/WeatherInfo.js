@@ -4,22 +4,22 @@ import FormattedDate from "./FormattedDate";
 export default function WeatherInfo(props) {
   return (
     <div className="WeatherInfo">
-      <div className="today">
-        <h1 className="current-city">{props.weatherData.city}</h1>
-        <FormattedDate date={props.weatherData.date} />
-      </div>
       <div className="row split-weather">
-        <div className="col">
+        <div className="today col">
+          <h1 className="current-city">{props.weatherData.city}</h1>
+          <FormattedDate date={props.weatherData.date} />
+        </div>
+        <div className="col temp-col">
           <img
             className="todays-icon"
             src={props.weatherData.icon}
             alt="weather-icon"
-          />
-          <span className="temp">
+          />{" "}
+          <div className=" temp">
             {Math.round(props.weatherData.temperature)} °C
-          </span>
+          </div>
         </div>
-        <div className="col split-weather">
+        <div className="col weather-data">
           <div className="weather-description text-capitalize">
             {props.weatherData.description}
           </div>
