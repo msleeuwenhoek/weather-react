@@ -4,7 +4,7 @@ import "./Weather.css";
 import WeatherInfo from "./WeatherInfo";
 import Forecast from "./Forecast";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faM, faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
+import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
