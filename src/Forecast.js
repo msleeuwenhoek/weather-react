@@ -1,12 +1,14 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "./Forecast.css";
+import ForecastDay from "./ForecastDay";
 
 export default function Forecast(props) {
-  const [forecastData, setForecastData] = useState({ ready: false });
+  const [loaded, setLoaded] = useState(false);
+  const [forecast, setForecast] = useState(null);
   function handleResponse(response) {
-    console.log(response.data);
-    setForecastData({ ready: true });
+    setForecast(response.data.daily);
+    setLoaded(true);
   }
 
   function Search() {
@@ -17,24 +19,20 @@ export default function Forecast(props) {
     axios.get(apiUrl).then(handleResponse);
   }
 
-  if (forecastData.ready) {
+  if (loaded) {
     return (
       <div className="Forecast">
-        <div className="WeekdayForecast row">
-          <div className="col weekDay">Monday </div>
-          <div className="col">
-            <img
-              className="weather-icon"
-              src="https://openweathermap.org/img/wn/01d@2x.png"
-              alt="weather-icon"
-            />
-          </div>
-          <div className="col">
-            <span className="min-temp">5 </span>
-            <span className="max-temp">| 10 °C</span>{" "}
-            <div className="col humidity">80%</div>
-          </div>
-        </div>
+        {forecast.map(function (dailyforecast, index) {
+          if (index < 5) {
+            return (
+              <div className="row" key={index}>
+                <ForecastDay forecast={dailyforecast} />
+              </div>
+            );
+          } else {
+            return null;
+          }
+        })}
       </div>
     );
   } else {
