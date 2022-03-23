@@ -1,5 +1,6 @@
-.credits-name {
+.Credits {
   text-align: center;
+  display: block;
 }
 @media (max-width: 400px) {
   .Credits {
