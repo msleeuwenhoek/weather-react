@@ -11,7 +11,7 @@ export default function Credits() {
       >
         Open-source code
       </a>
-      <span> by Merel Sleeuwenhoek</span>
+      <span className="credits-name"> by Merel Sleeuwenhoek</span>
     </div>
   );
 }

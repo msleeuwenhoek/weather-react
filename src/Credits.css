@@ -1,7 +1,6 @@
-.Credits {
+.credits-name {
   text-align: center;
 }
-
 @media (max-width: 400px) {
   .Credits {
     font-size: 0.7em;
