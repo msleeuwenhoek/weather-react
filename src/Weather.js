@@ -3,6 +3,8 @@ import React, { useState } from "react";
 import "./Weather.css";
 import WeatherInfo from "./WeatherInfo";
 import Forecast from "./Forecast";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faM, faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
@@ -47,17 +49,9 @@ export default function Weather(props) {
             className="col-6 "
             onChange={updateCity}
           />
-          <button type="submit" className="col-2 btn btn-primary btn-large">
-            Search
-          </button>
-          <button type="button" className="col-2 btn btn-primary btn-large">
-            Use location
-          </button>
+
           <button type="submit" className="col-2 btn btn-primary btn-small">
-            o
-          </button>
-          <button type="button" className="col-2 btn btn-primary btn-small">
-            o
+            <FontAwesomeIcon icon={faMagnifyingGlass} />
           </button>
         </form>
         <div className="Weather">

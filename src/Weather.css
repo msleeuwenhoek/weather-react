@@ -61,16 +61,3 @@ form {
 .Search button:hover {
   background-color: #7b4f84;
 }
-
-.Search .btn-small {
-  display: none;
-}
-
-@media screen and (max-width: 820px) {
-  .Search .btn-small {
-    display: block;
-  }
-  .Search .btn-large {
-    display: none;
-  }
-}
