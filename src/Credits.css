@@ -1,9 +1,13 @@
 .Credits {
   text-align: center;
-  display: block;
+  font-weight: bold;
+  padding: 1.5em;
 }
-@media (max-width: 400px) {
-  .Credits {
-    font-size: 0.7em;
-  }
+
+.Credits a {
+  color: #139480;
+  transition: all 250ms ease-in-out;
+}
+.Credits a:hover {
+  color: #27bea8;
 }

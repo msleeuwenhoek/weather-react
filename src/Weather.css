@@ -60,18 +60,19 @@
 form {
   display: flex;
   justify-content: center;
-  margin-block: 5%;
+  margin-block: 3em;
 }
 .Search input,
 .Search button {
   margin-inline: 1%;
-  box-shadow: 0.3em 0.5em 0.5em #00000094;
+
   border-radius: 8px;
   border: none;
   min-height: 2.5em;
 }
 .Search button {
   background-color: #139480;
+  transition: all 250ms ease-in-out;
 }
 .Search button:hover {
   background-color: #27bea8;

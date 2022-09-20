@@ -51,7 +51,10 @@ export default function Weather(props) {
               onChange={updateCity}
             />
 
-            <button type="submit" className="col-2 btn btn-primary btn-small">
+            <button
+              type="submit"
+              className="col-2 btn btn-primary btn-small search-btn"
+            >
               <FontAwesomeIcon icon={faMagnifyingGlass} />
             </button>
           </form>

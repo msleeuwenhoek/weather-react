@@ -4,12 +4,3 @@
 .App .weather-app {
   margin: 0 auto;
 }
-.Credits {
-  text-align: center;
-  display: block;
-}
-@media (max-width: 400px) {
-  .Credits {
-    font-size: 0.7em;
-  }
-}

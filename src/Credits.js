@@ -1,5 +1,6 @@
 import React from "react";
 import "./App.css";
+import "./Credits.css";
 
 export default function Credits() {
   return (

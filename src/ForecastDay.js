@@ -12,7 +12,7 @@ export default function ForecastDay(props) {
   let icon = `https://openweathermap.org/img/wn/${props.forecast.weather[0].icon}@2x.png`;
 
   return (
-    <div className="WeekdayForecast">
+    <div className="forecast-item">
       <div className="col weekDay">{formatDate()} </div>
       <div className="col">
         <img className="weather-icon" src={icon} alt="weather-icon" />
@@ -20,7 +20,9 @@ export default function ForecastDay(props) {
       <div className="col temp">
         <span className="min-temp">{Math.round(props.forecast.temp.min)} </span>
         |{" "}
-        <span className="max-temp">{Math.round(props.forecast.temp.max)}</span>{" "}
+        <span className="max-temp">
+          {Math.round(props.forecast.temp.max)} °C
+        </span>
         <div className="col humidity">{props.forecast.humidity}%</div>
       </div>
     </div>

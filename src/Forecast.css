@@ -3,60 +3,37 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
+  flex-direction: column;
 }
 
-.WeekdayForecast .row {
-  align-items: center;
-}
-.WeekdayForecast {
+.forecast-item {
+  display: flex;
+  flex-direction: row;
   font-size: 1.2em;
-  text-align: left;
   font-weight: 600;
-  margin-inline: 5%;
-  padding-inline: 5%;
 
-  width: 100%;
   align-items: center;
-  justify-content: center;
-  align-content: center;
   text-align: center;
-}
-
-.WeekdayForecast .weather-icon {
-  margin: -10%;
 }
 
 .min-temp {
   opacity: 0.5;
 }
 
-@media (max-width: 560px) {
-  .WeekdayForecast {
-    font-size: 0.8em;
-    padding-inline: 2%;
+@media (min-width: 735px) {
+  .Forecast {
+    flex-direction: row;
   }
-  .WeekdayForecast .weather-icon {
-    max-width: 7em;
-  }
-
-  .WeekdayForecast .col {
-    padding: 2%;
+  .forecast-item {
+    flex-direction: column;
+    padding-inline: 1rem;
+    margin-inline: 5%;
   }
 }
 
-@media (max-width: 520px) {
-  .WeekdayForecast .weather-icon {
-    max-width: 5em;
+@media (max-width: 320px) {
+  .forecast-item .humidity,
+  .forecast-item .temp {
+    font-size: 0.8rem;
   }
 }
-
-@media (max-width: 360px) {
-  .WeekdayForecast .weather-icon {
-    max-width: 3em;
-  }
-}
-@media (max-width: 250px) {
-  .WeekdayForecast .temp {
-    font-size: 0.7em;
-  }
-} ;
